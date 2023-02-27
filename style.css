@@ -2,7 +2,7 @@ body{
     padding: 0;
     margin: 0;
     font-family: 'Oswald', sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 nav{
@@ -297,7 +297,6 @@ nav{
 .action-figures{
     display: flex;
     align-items: center;
-    /* justify-content: center; */
 }
 
 .action-figure{
@@ -368,5 +367,82 @@ nav{
 }
 
 .action-figure-slider-right{
+    right: 0;
+}
+
+
+/* Led Posters section */
+
+.led-posters{
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.led-poster-section-heading{
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    position: relative;
+    top: 230px;
+    right: 30px;
+}
+
+.led-poster{
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    min-width: 50vw;
+    transition: all 1s ease-in-out;
+}
+
+.led-poster-img{
+    width: 600px;
+    padding-top: 210px;
+    padding-bottom: 210px;
+}
+
+.led-poster-details{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    width: 50%;
+    padding: 10px;
+}
+
+.led-poster-title{
+    font-size: 50px;
+}
+
+.led-poster-desc{
+    font-size: 22px;
+    color: gray;
+}
+
+.led-poster-slider{
+    position: absolute;
+    width: 40px;
+    height: 200px;
+    z-index: 1;
+    font-size: 30px;
+    background-color: #292828;
+    cursor: pointer;
+    color: gray;
+}
+
+.led-poster-slider:hover{
+    background-color: #5b5a5a;
+}
+
+.led-poster-slider-left{
+    left: 0;
+}
+
+.led-poster-slider-right{
     right: 0;
 }

@@ -119,3 +119,38 @@ actionFigureSliderLeft.addEventListener("click", ()=>{
     actionFigureSliderLeft.disabled = true;
    }
 });
+
+
+const ledPosters = document.querySelectorAll(".led-poster");
+
+const ledPosterSliderLeft = document.querySelector(".led-poster-slider-left");
+const ledPosterSliderRight = document.querySelector(".led-poster-slider-right");
+
+let ledPosterCounter = 0;
+ledPosterSliderLeft.disabled = true;
+
+ledPosterSliderRight.addEventListener("click", ()=>{
+    ledPosterSliderLeft.disabled = false;
+    
+
+    ledPosterCounter += 1;
+    if(ledPosterCounter === 0){
+        ledPosterSliderLeft.disabled = true;
+    }
+    ledPosters.forEach((item)=>{
+        item.style.transform = `translate(${-50 * ledPosterCounter}vw)`;
+    });
+    if(ledPosterCounter >= 6){
+        ledPosterCounter = -1;
+    }
+});
+
+ledPosterSliderLeft.addEventListener("click", ()=>{
+    ledPosterCounter -= 1;
+    if(ledPosterCounter === 0){
+        ledPosterSliderLeft.disabled = true;
+    }
+    ledPosters.forEach((item)=>{
+        item.style.transform = `translate(${-50 * ledPosterCounter}vw)`;
+    });
+});
