@@ -122,6 +122,7 @@ actionFigureSliderLeft.addEventListener("click", ()=>{
 
 
 const ledPosters = document.querySelectorAll(".led-poster");
+const ledPosterImgBg = document.querySelectorAll(".led-poster-img-bg");
 
 const ledPosterSliderLeft = document.querySelector(".led-poster-slider-left");
 const ledPosterSliderRight = document.querySelector(".led-poster-slider-right");
@@ -152,5 +153,18 @@ ledPosterSliderLeft.addEventListener("click", ()=>{
     }
     ledPosters.forEach((item)=>{
         item.style.transform = `translate(${-50 * ledPosterCounter}vw)`;
+    });
+});
+
+ledPosters.forEach((item, index)=>{
+    item.addEventListener("mouseover", ()=>{
+        ledPosterImgBg[index].style.width = `600px`;
+        ledPosterImgBg[index].style.height = `600px`;
+    });
+
+    
+    item.addEventListener("mouseout", ()=>{
+        ledPosterImgBg[index].style.width = `0`;
+        ledPosterImgBg[index].style.height = `0`;
     });
 });
