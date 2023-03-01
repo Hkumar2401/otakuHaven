@@ -77,17 +77,17 @@ nav{
 .slider{
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .slider-item{
     margin-top: 50px;
     display: flex;
     position: relative;
-    align-items: center;
+    align-items: center; 
     padding: 50px;
-    width: 100vw;
-    min-width: 1803px;
-    min-height: 755px;
+    min-width: 100%;
+    min-height: 100%;
     transition: all 1s ease-in-out;
 }
 
@@ -117,18 +117,18 @@ nav{
 }
 
 .slider-img-section{
-    margin-right: 250px;
+    width: 50%;
 }
 
 .slider-img{
-    width: 750px;
-    height: 750px;
+    width: 80%;
+    height: 80%;
     padding-left: 90px;
 }
 
 .slider-img-bg{
-    width: 900px;
-    height: 900px;
+    width: 45%;
+    height: 100%;
     border-radius: 50%;
     position: absolute;
     opacity: 0.2;
@@ -173,11 +173,41 @@ nav{
     background-color: rgb(249, 180, 180);
 }
 
+.slider-item:nth-child(7)  .slider-img{
+    width: 70%;
+    position: relative;
+    left: 50px;
+}
+
+
+.slider-item:nth-child(8)  .slider-img{
+    width: 60%;
+    height: 60%;
+    position: relative;
+    left: 70px;
+}
+
+.slider-item:nth-child(9)  .slider-img{
+    width: 60%;
+    height: 70%;
+    position: relative;
+    left: 70px;
+}
+
+.slider-item:nth-child(10)  .slider-img{
+    width: 60%;
+    height: 70%;
+    position: relative;
+    left: 70px;
+}
+
 
 .slider-details{
     display: flex;
+    width: 35%;
     flex-direction: column;
     justify-content: center;
+    margin-left: 50px;
 }
 
 .slider-title{
@@ -185,7 +215,7 @@ nav{
 }
 
 .slider-desc{
-    width: 550px;
+    width: 100%;
     font-size: 20px;
     color: rgb(161, 157, 157);
 }
@@ -297,14 +327,14 @@ nav{
 .action-figures{
     display: flex;
     align-items: center;
+    min-width: 100%;
 }
 
 .action-figure{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50vw;
-    margin: 30px;
+    min-width: 50%;
     position: relative;
     cursor: pointer;
     transition: all 1s ease-in-out;
@@ -312,8 +342,14 @@ nav{
 
 
 .action-figure-img{
-    width: 600px;
-    height: 600px;
+    width: 60%;
+    height: 60%;
+}
+
+
+.action-figure:nth-child(9) .action-figure-img{
+    width: 50%;
+    height: 50%;
 }
 
 .action-figure-img-bg{
@@ -333,7 +369,7 @@ nav{
     display: flex;
     flex-direction: column;
     margin: 50px;
-    width: 50%;
+    width: 40%;
     padding: 10px;
 }
 
@@ -377,8 +413,10 @@ nav{
     display: flex;
     align-items: center;
     position: relative;
+    width: 100%;
     margin-top: 100px;
     margin-bottom: 100px;
+    background-color: #000000;
 }
 
 .led-poster-section-heading{
@@ -393,26 +431,27 @@ nav{
 }
 
 .led-poster{
-    background-color: #000000;
     display: flex;
+    background-color: #000000;
     align-items: center;
-    min-width: 50vw;
+    justify-content: center;
+    min-width: 50%;
     cursor: pointer;
     transition: all 1s ease-in-out;
+    padding-top: 210px;
+    padding-bottom: 210px;
 }
 
 .led-poster-img{
-    width: 600px;
-    padding-top: 210px;
-    padding-bottom: 210px;
+    width: 60%;
 }
 
 .led-poster-details{
     color: #fff;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    margin: 50px;
-    width: 50%;
+    width: 30%;
     padding: 10px;
 }
 
@@ -421,7 +460,7 @@ nav{
 }
 
 .led-poster-desc{
-    font-size: 22px;
+    font-size: 1.5rem;
     color: gray;
 }
 
@@ -431,13 +470,14 @@ nav{
     height: 200px;
     z-index: 1;
     font-size: 30px;
-    background-color: #292828;
+    background-color: transparent;
+    border: none;
     cursor: pointer;
     color: gray;
 }
 
 .led-poster-slider:hover{
-    background-color: #5b5a5a;
+    background-color: #3a3a3a;
 }
 
 .led-poster-slider-left{
@@ -447,16 +487,17 @@ nav{
 .led-poster-slider-right{
     right: 0;
 }
-
+/* 
 .led-poster-img-bg{
     width: 0px;
     height: 0px;
     background-color: gray;
     border-radius: 50%;
     position: absolute;
+    left: 0;
     opacity: 0.1;
     transition: all 0.3s ease-in;
-}
+} */
 
 
 /* Split Design */
@@ -479,36 +520,18 @@ nav{
 .split-design{
     display: flex;
     min-width: 50%;
-    background-color: whitesmoke;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     position: relative;
-    margin-left: 10px;
     transition: all 1s ease-in-out;
+    justify-content: center;
 }
 
 .split-design-img{
-    width: 70%;
+    width: 90%;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-}
-
-.split-design-details{
-    width: 30%;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-}
-
-.split-design-title{
-    font-size: 40px;
-}
-
-.split-design-desc{
-    font-size: 26px;
-    color: gray;
+    border-radius: 50px;
 }
 
 .split-design-slider{
@@ -518,7 +541,7 @@ nav{
     z-index: 1;
     border: none;
     font-size: 20px;
-    background-color: rgb(226, 226, 226);
+    background-color: rgb(236, 235, 235);
     cursor: pointer;
 }
 

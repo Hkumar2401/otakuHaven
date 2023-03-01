@@ -7,9 +7,9 @@ let sliderCounter = 0;
 
 leftButton.disabled = true;
 
-setInterval(() => {
-   rightButton.click(); 
-}, 7000);
+// setInterval(() => {
+//    rightButton.click(); 
+// }, 7000);
 
 rightButton.addEventListener("click",()=>{
     leftButton.disabled = false;
@@ -19,7 +19,7 @@ rightButton.addEventListener("click",()=>{
         leftButton.disabled = true;
     }
     sliderList.forEach((item)=>{
-        item.style.transform = `translateX(${-100 * sliderCounter}vw)`;
+        item.style.transform = `translateX(${-100 * sliderCounter}%)`;
     });
     if(sliderCounter >=8){
         sliderCounter = -1;
@@ -32,7 +32,7 @@ leftButton.addEventListener("click",()=>{
 
     sliderCounter -= 1;
     sliderList.forEach((item)=>{
-        item.style.transform = `translateX(${-100 * sliderCounter}vw)`
+        item.style.transform = `translateX(${-100 * sliderCounter}%)`
     });
     if(sliderCounter === 0){
         leftButton.disabled = true;
@@ -59,20 +59,26 @@ actionFigure.forEach((item, index)=>{
 
     item.addEventListener("mouseover", ()=>{
 
-        if(index === 7){
-            actionFigureImgBg[index].style.width = `600px`;
-            actionFigureImgBg[index].style.height = `600px`;
+
+        if(index === 5){
+            actionFigureImgBg[index].style.width = `60%`;
+            actionFigureImgBg[index].style.height = `100%`;
+            actionFigureImgBg[index].style.left = `-30px`;
+            actionFigureImgBg[index].style.bottom = `unset`;
+        } else if(index === 7){
+            actionFigureImgBg[index].style.width = `60%`;
+            actionFigureImgBg[index].style.height = `100%`;
             actionFigureImgBg[index].style.left = `-50px`;
             actionFigureImgBg[index].style.bottom = `unset`;
         } else if(index === 9){
-            actionFigureImgBg[index].style.width = `600px`;
-            actionFigureImgBg[index].style.height = `600px`;
-            actionFigureImgBg[index].style.left = `-70px`;
+            actionFigureImgBg[index].style.width = `62%`;
+            actionFigureImgBg[index].style.height = `90%`;
+            actionFigureImgBg[index].style.left = `-30px`;
             actionFigureImgBg[index].style.bottom = `unset`;
         }
         else{
-            actionFigureImgBg[index].style.width = `600px`;
-            actionFigureImgBg[index].style.height = `600px`;
+            actionFigureImgBg[index].style.width = `60%`;
+            actionFigureImgBg[index].style.height = `100%`;
             actionFigureImgBg[index].style.left = `0px`;
             actionFigureImgBg[index].style.bottom = `unset`;
         }
@@ -102,7 +108,7 @@ actionFigureSliderRight.addEventListener("click", ()=>{
         actionFigureSliderLeft.disabled = true;
     }
     actionFigure.forEach((item)=>{
-        item.style.transform = `translateX(${-50 * actionFigureCounter}vw)`;
+        item.style.transform = `translateX(${-100 * actionFigureCounter}%)`;
     });
     if(actionFigureCounter > 9){
         actionFigureCounter = -1;
@@ -112,7 +118,7 @@ actionFigureSliderRight.addEventListener("click", ()=>{
 actionFigureSliderLeft.addEventListener("click", ()=>{
    actionFigureCounter -= 1;
    actionFigure.forEach((item)=>{
-    item.style.transform = `translateX(${-50 * actionFigureCounter}vw)`
+    item.style.transform = `translateX(${-100 * actionFigureCounter}%)`
    }); 
 
    if(actionFigureCounter === 0){
@@ -139,7 +145,7 @@ ledPosterSliderRight.addEventListener("click", ()=>{
         ledPosterSliderLeft.disabled = true;
     }
     ledPosters.forEach((item)=>{
-        item.style.transform = `translate(${-50 * ledPosterCounter}vw)`;
+        item.style.transform = `translate(${-100 * ledPosterCounter}%)`;
     });
     if(ledPosterCounter >= 6){
         ledPosterCounter = -1;
@@ -152,22 +158,24 @@ ledPosterSliderLeft.addEventListener("click", ()=>{
         ledPosterSliderLeft.disabled = true;
     }
     ledPosters.forEach((item)=>{
-        item.style.transform = `translate(${-50 * ledPosterCounter}vw)`;
+        item.style.transform = `translate(${-100 * ledPosterCounter}%)`;
     });
 });
 
-ledPosters.forEach((item, index)=>{
-    item.addEventListener("mouseover", ()=>{
-        ledPosterImgBg[index].style.width = `600px`;
-        ledPosterImgBg[index].style.height = `600px`;
-    });
+// ledPosters.forEach((item, index)=>{
+//     item.addEventListener("mouseover", ()=>{
+        
+//         ledPosterImgBg[index].style.width = `60%`;
+//         ledPosterImgBg[index].style.height = `60%`;
+//         // ledPosterImgBg[index].style.left = `unset`;
+//     });
 
     
-    item.addEventListener("mouseout", ()=>{
-        ledPosterImgBg[index].style.width = `0`;
-        ledPosterImgBg[index].style.height = `0`;
-    });
-});
+//     item.addEventListener("mouseout", ()=>{
+//         ledPosterImgBg[index].style.width = `0`;
+//         ledPosterImgBg[index].style.height = `0`;
+//     });
+// });
 
 
 const splitDesignLeft = document.querySelector(".split-design-slider-left");
