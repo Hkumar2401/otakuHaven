@@ -168,3 +168,40 @@ ledPosters.forEach((item, index)=>{
         ledPosterImgBg[index].style.height = `0`;
     });
 });
+
+
+const splitDesignLeft = document.querySelector(".split-design-slider-left");
+const splitDesignRight = document.querySelector(".split-design-slider-right");
+const splitDesigns = document.querySelectorAll(".split-design");
+
+let splitDesignCounter = 0;
+splitDesignLeft.disabled = true;
+
+
+splitDesignRight.addEventListener("click", ()=>{
+    splitDesignLeft.disabled = false;
+
+    splitDesignCounter += 1;
+
+    if(splitDesignCounter === 0){
+        splitDesignLeft.disabled = true;
+    }
+    
+    splitDesigns.forEach((item)=>{
+        item.style.transform = `translateX(${-50 * splitDesignCounter}vw)`;
+    });
+    if(splitDesignCounter >= 6){
+        splitDesignCounter = -1;
+    }
+});
+
+splitDesignLeft.addEventListener("click", ()=>{
+    splitDesignCounter -= 1;
+    if(splitDesignCounter === 0){
+        splitDesignLeft.disabled = true;
+    }
+    splitDesigns.forEach((item)=>{
+        item.style.transform = `translateX(${-50 * splitDesignCounter}vw)`;
+    });
+});
+
