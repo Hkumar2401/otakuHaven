@@ -7,9 +7,9 @@ let sliderCounter = 0;
 
 leftButton.disabled = true;
 
-// setInterval(() => {
-//    rightButton.click(); 
-// }, 7000);
+setInterval(() => {
+   rightButton.click(); 
+}, 7000);
 
 rightButton.addEventListener("click",()=>{
     leftButton.disabled = false;
