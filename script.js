@@ -57,6 +57,7 @@ const actionFigureImgBg = document.querySelectorAll(".action-figure-img-bg");
 
 actionFigure.forEach((item, index)=>{
 
+let width = window.outerWidth;
     item.addEventListener("mouseover", ()=>{
 
 
@@ -66,21 +67,50 @@ actionFigure.forEach((item, index)=>{
             actionFigureImgBg[index].style.left = `-30px`;
             actionFigureImgBg[index].style.bottom = `unset`;
         } else if(index === 7){
-            actionFigureImgBg[index].style.width = `60%`;
-            actionFigureImgBg[index].style.height = `100%`;
-            actionFigureImgBg[index].style.left = `-50px`;
-            actionFigureImgBg[index].style.bottom = `unset`;
-        } else if(index === 9){
+
+            if(width <= 420){
+                actionFigureImgBg[index].style.width = `60%`;
+                actionFigureImgBg[index].style.height = `100%`;
+                actionFigureImgBg[index].style.left = `-20px`;
+                actionFigureImgBg[index].style.bottom = `unset`;
+            }else{
+
+                actionFigureImgBg[index].style.width = `60%`;
+                actionFigureImgBg[index].style.height = `100%`;
+                actionFigureImgBg[index].style.left = `-50px`;
+                actionFigureImgBg[index].style.bottom = `unset`;
+                
+            }
+        }else if(index === 8){
+            
+            if(width <= 420){
+                actionFigureImgBg[index].style.width = `60%`;
+                actionFigureImgBg[index].style.height = `100%`;
+                actionFigureImgBg[index].style.left = `-20px`;
+                actionFigureImgBg[index].style.bottom = `unset`;
+            }
+
+        }else if(index === 9){
             actionFigureImgBg[index].style.width = `62%`;
             actionFigureImgBg[index].style.height = `90%`;
             actionFigureImgBg[index].style.left = `-30px`;
             actionFigureImgBg[index].style.bottom = `unset`;
-        }
-        else{
-            actionFigureImgBg[index].style.width = `60%`;
-            actionFigureImgBg[index].style.height = `100%`;
+
+        } else if(index === 10){
+
+            actionFigureImgBg[index].style.width = `55%`;
+            actionFigureImgBg[index].style.height = `90%`;
             actionFigureImgBg[index].style.left = `0px`;
             actionFigureImgBg[index].style.bottom = `unset`;
+
+        }
+        else{
+
+                actionFigureImgBg[index].style.width = `60%`;
+                actionFigureImgBg[index].style.height = `100%`;
+                actionFigureImgBg[index].style.left = `0px`;
+                actionFigureImgBg[index].style.bottom = `unset`;
+
         }
     });
     
@@ -162,21 +192,6 @@ ledPosterSliderLeft.addEventListener("click", ()=>{
     });
 });
 
-// ledPosters.forEach((item, index)=>{
-//     item.addEventListener("mouseover", ()=>{
-        
-//         ledPosterImgBg[index].style.width = `60%`;
-//         ledPosterImgBg[index].style.height = `60%`;
-//         // ledPosterImgBg[index].style.left = `unset`;
-//     });
-
-    
-//     item.addEventListener("mouseout", ()=>{
-//         ledPosterImgBg[index].style.width = `0`;
-//         ledPosterImgBg[index].style.height = `0`;
-//     });
-// });
-
 
 const splitDesignLeft = document.querySelector(".split-design-slider-left");
 const splitDesignRight = document.querySelector(".split-design-slider-right");
@@ -212,4 +227,5 @@ splitDesignLeft.addEventListener("click", ()=>{
         item.style.transform = `translateX(${-100 * splitDesignCounter}%)`;
     });
 });
+
 
