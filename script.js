@@ -196,7 +196,7 @@ splitDesignRight.addEventListener("click", ()=>{
     }
     
     splitDesigns.forEach((item)=>{
-        item.style.transform = `translateX(${-50 * splitDesignCounter}vw)`;
+        item.style.transform = `translateX(${-100 * splitDesignCounter}%)`;
     });
     if(splitDesignCounter >= 6){
         splitDesignCounter = -1;
@@ -209,7 +209,7 @@ splitDesignLeft.addEventListener("click", ()=>{
         splitDesignLeft.disabled = true;
     }
     splitDesigns.forEach((item)=>{
-        item.style.transform = `translateX(${-50 * splitDesignCounter}vw)`;
+        item.style.transform = `translateX(${-100 * splitDesignCounter}%)`;
     });
 });
 
